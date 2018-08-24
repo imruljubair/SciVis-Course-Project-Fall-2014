@@ -1,0 +1,678 @@
+Source:
+           D:\MY_COURSE\CPSC_601\Project\Works\2.Creating_Icosahedron\icon_ocean.nc
+Format:
+           64bit
+Global Attributes:
+           CDI                 = 'Climate Data Interface version 1.6.4rc1 (http://code.zmaw.de/projects/cdi)'
+           Conventions         = 'CF-1.4'
+           number_of_grid_used = 42
+           uuidOfHGrid         = '4383561e-3ca8-11e3-a5e1-fd44f970fdf2'
+           institution         = 'Max Planck Institute for Meteorology/Deutscher Wetterdienst'
+Dimensions:
+           ncells   = 20480
+           nv       = 3
+           ncells_2 = 30720
+           nv_2     = 4
+           ncells_3 = 10242
+           nv_3     = 6
+           depth    = 20
+           depth_2  = 21
+           lev      = 1
+           time     = 19    (UNLIMITED)
+Variables:
+    clon                   
+           Size:       20480x1
+           Dimensions: ncells
+           Datatype:   double
+           Attributes:
+                       standard_name = 'longitude'
+                       long_name     = 'center longitude'
+                       units         = 'radian'
+                       bounds        = 'clon_vertices'
+    clon_vertices          
+           Size:       3x20480
+           Dimensions: nv,ncells
+           Datatype:   double
+    clat                   
+           Size:       20480x1
+           Dimensions: ncells
+           Datatype:   double
+           Attributes:
+                       standard_name = 'latitude'
+                       long_name     = 'center latitude'
+                       units         = 'radian'
+                       bounds        = 'clat_vertices'
+    clat_vertices          
+           Size:       3x20480
+           Dimensions: nv,ncells
+           Datatype:   double
+    elon                   
+           Size:       30720x1
+           Dimensions: ncells_2
+           Datatype:   double
+           Attributes:
+                       standard_name = 'longitude'
+                       long_name     = 'edge midpoint longitude'
+                       units         = 'radian'
+                       bounds        = 'elon_vertices'
+    elon_vertices          
+           Size:       4x30720
+           Dimensions: nv_2,ncells_2
+           Datatype:   double
+    elat                   
+           Size:       30720x1
+           Dimensions: ncells_2
+           Datatype:   double
+           Attributes:
+                       standard_name = 'latitude'
+                       long_name     = 'edge midpoint latitude'
+                       units         = 'radian'
+                       bounds        = 'elat_vertices'
+    elat_vertices          
+           Size:       4x30720
+           Dimensions: nv_2,ncells_2
+           Datatype:   double
+    vlon                   
+           Size:       10242x1
+           Dimensions: ncells_3
+           Datatype:   double
+           Attributes:
+                       standard_name = 'longitude'
+                       long_name     = 'vertex longitude'
+                       units         = 'radian'
+                       bounds        = 'vlon_vertices'
+    vlon_vertices          
+           Size:       6x10242
+           Dimensions: nv_3,ncells_3
+           Datatype:   double
+    vlat                   
+           Size:       10242x1
+           Dimensions: ncells_3
+           Datatype:   double
+           Attributes:
+                       standard_name = 'latitude'
+                       long_name     = 'vertex latitude'
+                       units         = 'radian'
+                       bounds        = 'vlat_vertices'
+    vlat_vertices          
+           Size:       6x10242
+           Dimensions: nv_3,ncells_3
+           Datatype:   double
+    depth                  
+           Size:       20x1
+           Dimensions: depth
+           Datatype:   double
+           Attributes:
+                       standard_name = 'depth'
+                       long_name     = 'depth_below_sea'
+                       units         = 'm'
+                       positive      = 'down'
+                       axis          = 'Z'
+    depth_2                
+           Size:       21x1
+           Dimensions: depth_2
+           Datatype:   double
+           Attributes:
+                       standard_name = 'depth'
+                       long_name     = 'depth_below_sea'
+                       units         = 'm'
+                       positive      = 'down'
+                       axis          = 'Z'
+    lev                    
+           Size:       1x1
+           Dimensions: lev
+           Datatype:   double
+           Attributes:
+                       long_name = 'generic'
+                       units     = 'level'
+                       axis      = 'Z'
+    time                   
+           Size:       19x1
+           Dimensions: time
+           Datatype:   double
+           Attributes:
+                       standard_name = 'time'
+                       units         = 'day as %Y%m%d.%f'
+                       calendar      = 'proleptic_gregorian'
+    lsm_c                  
+           Size:       20480x20
+           Dimensions: ncells,depth
+           Datatype:   int8
+           Attributes:
+                       standard_name               = 'lsm_c'
+                       long_name                   = '3d lsm on cells'
+                       code                        = 255
+                       grid_type                   = 'unstructured'
+                       coordinates                 = 'clon clat'
+                       number_of_grid_in_reference = 1
+    lsm_e                  
+           Size:       30720x20
+           Dimensions: ncells_2,depth
+           Datatype:   int8
+           Attributes:
+                       standard_name               = 'lsm_e'
+                       long_name                   = '3d lsm on edges'
+                       code                        = 255
+                       grid_type                   = 'unstructured'
+                       coordinates                 = 'elon elat'
+                       number_of_grid_in_reference = 3
+    basin_c                
+           Size:       20480x1
+           Dimensions: ncells
+           Datatype:   int8
+           Attributes:
+                       standard_name               = 'basin_c'
+                       long_name                   = 'basin_c'
+                       code                        = 255
+                       grid_type                   = 'unstructured'
+                       coordinates                 = 'clon clat'
+                       number_of_grid_in_reference = 1
+    regio_c                
+           Size:       20480x1
+           Dimensions: ncells
+           Datatype:   int8
+           Attributes:
+                       standard_name               = 'regio_c'
+                       long_name                   = 'regio_c'
+                       code                        = 255
+                       grid_type                   = 'unstructured'
+                       coordinates                 = 'clon clat'
+                       number_of_grid_in_reference = 1
+    wet_c                  
+           Size:       20480x20
+           Dimensions: ncells,depth
+           Datatype:   single
+           Attributes:
+                       standard_name               = 'wet_c'
+                       long_name                   = '3d lsm on cells'
+                       code                        = 255
+                       grid_type                   = 'unstructured'
+                       coordinates                 = 'clon clat'
+                       number_of_grid_in_reference = 1
+    wet_e                  
+           Size:       30720x20
+           Dimensions: ncells_2,depth
+           Datatype:   single
+           Attributes:
+                       standard_name               = 'wet_e'
+                       long_name                   = '3d lsm on edges'
+                       code                        = 255
+                       grid_type                   = 'unstructured'
+                       coordinates                 = 'elon elat'
+                       number_of_grid_in_reference = 3
+    mld                    
+           Size:       20480x19
+           Dimensions: ncells,time
+           Datatype:   single
+           Attributes:
+                       standard_name               = 'mld'
+                       long_name                   = 'mixed layer depth'
+                       units                       = 'm'
+                       code                        = 255
+                       grid_type                   = 'unstructured'
+                       coordinates                 = 'clon clat'
+                       number_of_grid_in_reference = 1
+    condep                 
+           Size:       20480x19
+           Dimensions: ncells,time
+           Datatype:   int8
+           Attributes:
+                       standard_name               = 'condep'
+                       long_name                   = 'convection depth index'
+                       code                        = 255
+                       grid_type                   = 'unstructured'
+                       coordinates                 = 'clon clat'
+                       number_of_grid_in_reference = 1
+    h_acc                  
+           Size:       20480x19
+           Dimensions: ncells,time
+           Datatype:   single
+           Attributes:
+                       standard_name               = 'h_acc'
+                       long_name                   = 'surface elevation at cell center'
+                       units                       = 'm'
+                       code                        = 255
+                       grid_type                   = 'unstructured'
+                       coordinates                 = 'clon clat'
+                       number_of_grid_in_reference = 1
+    u_acc                  
+           Size:       20480x20x19
+           Dimensions: ncells,depth,time
+           Datatype:   single
+           Attributes:
+                       standard_name               = 'u_acc'
+                       long_name                   = 'meridional velocity component'
+                       units                       = 'm/s'
+                       code                        = 255
+                       grid_type                   = 'unstructured'
+                       coordinates                 = 'clon clat'
+                       number_of_grid_in_reference = 1
+    v_acc                  
+           Size:       20480x20x19
+           Dimensions: ncells,depth,time
+           Datatype:   single
+           Attributes:
+                       standard_name               = 'v_acc'
+                       long_name                   = 'zonal velocity component'
+                       units                       = 'm/s'
+                       code                        = 255
+                       grid_type                   = 'unstructured'
+                       coordinates                 = 'clon clat'
+                       number_of_grid_in_reference = 1
+    rhopot_acc             
+           Size:       20480x20x19
+           Dimensions: ncells,depth,time
+           Datatype:   single
+           Attributes:
+                       standard_name               = 'rhopot_acc'
+                       long_name                   = 'potential density'
+                       units                       = 'kg/m^3'
+                       code                        = 255
+                       grid_type                   = 'unstructured'
+                       coordinates                 = 'clon clat'
+                       number_of_grid_in_reference = 1
+    rho_acc                
+           Size:       20480x20x19
+           Dimensions: ncells,depth,time
+           Datatype:   single
+           Attributes:
+                       standard_name               = 'rho_acc'
+                       long_name                   = 'insitu density'
+                       units                       = 'kg/m^3'
+                       code                        = 255
+                       grid_type                   = 'unstructured'
+                       coordinates                 = 'clon clat'
+                       number_of_grid_in_reference = 1
+    w_acc                  
+           Size:       20480x21x19
+           Dimensions: ncells,depth_2,time
+           Datatype:   single
+           Attributes:
+                       standard_name               = 'w_acc'
+                       long_name                   = 'vertical velocity'
+                       units                       = 'm/s'
+                       code                        = 255
+                       grid_type                   = 'unstructured'
+                       coordinates                 = 'clon clat'
+                       number_of_grid_in_reference = 1
+    mass_flx_e_acc         
+           Size:       30720x20x19
+           Dimensions: ncells_2,depth,time
+           Datatype:   single
+           Attributes:
+                       standard_name               = 'mass_flx_e_acc'
+                       long_name                   = 'mass flux at edges'
+                       code                        = 255
+                       grid_type                   = 'unstructured'
+                       coordinates                 = 'elon elat'
+                       number_of_grid_in_reference = 3
+    div_mass_flx_c_acc     
+           Size:       20480x20x19
+           Dimensions: ncells,depth,time
+           Datatype:   single
+           Attributes:
+                       standard_name               = 'div_mass_flx_c_acc'
+                       long_name                   = 'divergence of mass flux'
+                       code                        = 255
+                       grid_type                   = 'unstructured'
+                       coordinates                 = 'clon clat'
+                       number_of_grid_in_reference = 1
+    u_vint_acc             
+           Size:       20480x19
+           Dimensions: ncells,time
+           Datatype:   single
+           Attributes:
+                       standard_name               = 'u_vint_acc'
+                       long_name                   = 'barotropic zonal velocity'
+                       units                       = 'm*m/s'
+                       code                        = 255
+                       grid_type                   = 'unstructured'
+                       coordinates                 = 'clon clat'
+                       number_of_grid_in_reference = 1
+    vort_acc               
+           Size:       10242x20x19
+           Dimensions: ncells_3,depth,time
+           Datatype:   single
+           Attributes:
+                       standard_name               = 'vort_acc'
+                       long_name                   = 'vorticity'
+                       units                       = '1/s'
+                       code                        = 255
+                       grid_type                   = 'unstructured'
+                       coordinates                 = 'vlon vlat'
+                       number_of_grid_in_reference = 2
+    kin_acc                
+           Size:       20480x20x19
+           Dimensions: ncells,depth,time
+           Datatype:   single
+           Attributes:
+                       standard_name               = 'kin_acc'
+                       long_name                   = 'kinetic energy'
+                       units                       = 'J'
+                       code                        = 255
+                       grid_type                   = 'unstructured'
+                       coordinates                 = 'clon clat'
+                       number_of_grid_in_reference = 1
+    t_acc                  
+           Size:       20480x20x19
+           Dimensions: ncells,depth,time
+           Datatype:   single
+           Attributes:
+                       standard_name               = 't_acc'
+                       long_name                   = 'potential temperature'
+                       units                       = 'deg C'
+                       code                        = 255
+                       grid_type                   = 'unstructured'
+                       coordinates                 = 'clon clat'
+                       number_of_grid_in_reference = 1
+    s_acc                  
+           Size:       20480x20x19
+           Dimensions: ncells,depth,time
+           Datatype:   single
+           Attributes:
+                       standard_name               = 's_acc'
+                       long_name                   = 'salinity'
+                       units                       = 'psu'
+                       code                        = 255
+                       grid_type                   = 'unstructured'
+                       coordinates                 = 'clon clat'
+                       number_of_grid_in_reference = 1
+    forc_tracer_acc_t      
+           Size:       20480x19
+           Dimensions: ncells,time
+           Datatype:   single
+           Attributes:
+                       standard_name               = 'forc_tracer_acct'
+                       long_name                   = 'forcing accumulated: potential temperature'
+                       units                       = 'deg C'
+                       code                        = 255
+                       grid_type                   = 'unstructured'
+                       coordinates                 = 'clon clat'
+                       number_of_grid_in_reference = 1
+    forc_tracer_acc_s      
+           Size:       20480x19
+           Dimensions: ncells,time
+           Datatype:   single
+           Attributes:
+                       standard_name               = 'forc_tracer_accs'
+                       long_name                   = 'forcing accumulated: salinity'
+                       units                       = 'psu'
+                       code                        = 255
+                       grid_type                   = 'unstructured'
+                       coordinates                 = 'clon clat'
+                       number_of_grid_in_reference = 1
+    forc_tracer_relax_acc_t
+           Size:       20480x19
+           Dimensions: ncells,time
+           Datatype:   single
+           Attributes:
+                       standard_name               = 'forc_tracer_relax_acct'
+                       long_name                   = 'forcing relaxation accumulated: potential temperature'
+                       units                       = 'deg C'
+                       code                        = 255
+                       grid_type                   = 'unstructured'
+                       coordinates                 = 'clon clat'
+                       number_of_grid_in_reference = 1
+    forc_tracer_relax_acc_s
+           Size:       20480x19
+           Dimensions: ncells,time
+           Datatype:   single
+           Attributes:
+                       standard_name               = 'forc_tracer_relax_accs'
+                       long_name                   = 'forcing relaxation accumulated: salinity'
+                       units                       = 'psu'
+                       code                        = 255
+                       grid_type                   = 'unstructured'
+                       coordinates                 = 'clon clat'
+                       number_of_grid_in_reference = 1
+    forc_wind_u_acc        
+           Size:       20480x19
+           Dimensions: ncells,time
+           Datatype:   single
+           Attributes:
+                       standard_name               = 'forc_wind_u_acc'
+                       long_name                   = 'forc_wind_u_acc'
+                       units                       = 'm/s'
+                       code                        = 255
+                       grid_type                   = 'unstructured'
+                       coordinates                 = 'clon clat'
+                       number_of_grid_in_reference = 1
+    forc_wind_v_acc        
+           Size:       20480x19
+           Dimensions: ncells,time
+           Datatype:   single
+           Attributes:
+                       standard_name               = 'forc_wind_v_acc'
+                       long_name                   = 'forc_wind_v_acc'
+                       units                       = 'm/s'
+                       code                        = 255
+                       grid_type                   = 'unstructured'
+                       coordinates                 = 'clon clat'
+                       number_of_grid_in_reference = 1
+    forc_hflx_acc          
+           Size:       20480x19
+           Dimensions: ncells,time
+           Datatype:   single
+           Attributes:
+                       standard_name               = 'forc_hflx_acc'
+                       long_name                   = 'forc_hflx_acc'
+                       units                       = 'm/s'
+                       code                        = 255
+                       grid_type                   = 'unstructured'
+                       coordinates                 = 'clon clat'
+                       number_of_grid_in_reference = 1
+    forc_fw_tot_acc        
+           Size:       20480x19
+           Dimensions: ncells,time
+           Datatype:   single
+           Attributes:
+                       standard_name               = 'forc_fw_tot_acc'
+                       long_name                   = 'forc_fw_tot_acc'
+                       units                       = 'm/s'
+                       code                        = 255
+                       grid_type                   = 'unstructured'
+                       coordinates                 = 'clon clat'
+                       number_of_grid_in_reference = 1
+    forc_swflx_acc         
+           Size:       20480x19
+           Dimensions: ncells,time
+           Datatype:   single
+           Attributes:
+                       standard_name               = 'forc_swflx_acc'
+                       long_name                   = 'forc_swflx_acc'
+                       units                       = 'm/s'
+                       code                        = 255
+                       grid_type                   = 'unstructured'
+                       coordinates                 = 'clon clat'
+                       number_of_grid_in_reference = 1
+    forc_lwflx_acc         
+           Size:       20480x19
+           Dimensions: ncells,time
+           Datatype:   single
+           Attributes:
+                       standard_name               = 'forc_lwflx_acc'
+                       long_name                   = 'forc_lwflx_acc'
+                       units                       = 'm/s'
+                       code                        = 255
+                       grid_type                   = 'unstructured'
+                       coordinates                 = 'clon clat'
+                       number_of_grid_in_reference = 1
+    forc_ssflx_acc         
+           Size:       20480x19
+           Dimensions: ncells,time
+           Datatype:   single
+           Attributes:
+                       standard_name               = 'forc_ssflx_acc'
+                       long_name                   = 'forc_ssflx_acc'
+                       units                       = 'm/s'
+                       code                        = 255
+                       grid_type                   = 'unstructured'
+                       coordinates                 = 'clon clat'
+                       number_of_grid_in_reference = 1
+    forc_slflx_acc         
+           Size:       20480x19
+           Dimensions: ncells,time
+           Datatype:   single
+           Attributes:
+                       standard_name               = 'forc_slflx_acc'
+                       long_name                   = 'forc_slflx_acc'
+                       units                       = 'm/s'
+                       code                        = 255
+                       grid_type                   = 'unstructured'
+                       coordinates                 = 'clon clat'
+                       number_of_grid_in_reference = 1
+    forc_precip_acc        
+           Size:       20480x19
+           Dimensions: ncells,time
+           Datatype:   single
+           Attributes:
+                       standard_name               = 'forc_precip_acc'
+                       long_name                   = 'forc_precip_acc'
+                       units                       = 'm/s'
+                       code                        = 255
+                       grid_type                   = 'unstructured'
+                       coordinates                 = 'clon clat'
+                       number_of_grid_in_reference = 1
+    forc_evap_acc          
+           Size:       20480x19
+           Dimensions: ncells,time
+           Datatype:   single
+           Attributes:
+                       standard_name               = 'forc_evap_acc'
+                       long_name                   = 'forc_evap_acc'
+                       units                       = 'm/s'
+                       code                        = 255
+                       grid_type                   = 'unstructured'
+                       coordinates                 = 'clon clat'
+                       number_of_grid_in_reference = 1
+    forc_runoff_acc        
+           Size:       20480x19
+           Dimensions: ncells,time
+           Datatype:   single
+           Attributes:
+                       standard_name               = 'forc_runoff_acc'
+                       long_name                   = 'forc_runoff_acc'
+                       units                       = 'm/s'
+                       code                        = 255
+                       grid_type                   = 'unstructured'
+                       coordinates                 = 'clon clat'
+                       number_of_grid_in_reference = 1
+    forc_fw_bc_acc         
+           Size:       20480x19
+           Dimensions: ncells,time
+           Datatype:   single
+           Attributes:
+                       standard_name               = 'forc_fw_bc_acc'
+                       long_name                   = 'forc_fw_bc_acc'
+                       units                       = 'm/s'
+                       code                        = 255
+                       grid_type                   = 'unstructured'
+                       coordinates                 = 'clon clat'
+                       number_of_grid_in_reference = 1
+    forc_fw_bc_oce_acc     
+           Size:       20480x19
+           Dimensions: ncells,time
+           Datatype:   single
+           Attributes:
+                       standard_name               = 'forc_fw_bc_oce_acc'
+                       long_name                   = 'forc_fw_bc_oce_acc'
+                       units                       = 'm/s'
+                       code                        = 255
+                       grid_type                   = 'unstructured'
+                       coordinates                 = 'clon clat'
+                       number_of_grid_in_reference = 1
+    forc_fw_bc_ice_acc     
+           Size:       20480x19
+           Dimensions: ncells,time
+           Datatype:   single
+           Attributes:
+                       standard_name               = 'forc_fw_bc_ice_acc'
+                       long_name                   = 'forc_fw_bc_ice_acc'
+                       units                       = 'm/s'
+                       code                        = 255
+                       grid_type                   = 'unstructured'
+                       coordinates                 = 'clon clat'
+                       number_of_grid_in_reference = 1
+    forc_hfrelax_acc       
+           Size:       20480x19
+           Dimensions: ncells,time
+           Datatype:   single
+           Attributes:
+                       standard_name               = 'forc_hfrelax_acc'
+                       long_name                   = 'forc_hfrelax_acc'
+                       units                       = 'm/s'
+                       code                        = 255
+                       grid_type                   = 'unstructured'
+                       coordinates                 = 'clon clat'
+                       number_of_grid_in_reference = 1
+    forc_fwrelax_acc       
+           Size:       20480x19
+           Dimensions: ncells,time
+           Datatype:   single
+           Attributes:
+                       standard_name               = 'forc_fwrelax_acc'
+                       long_name                   = 'forc_fwrelax_acc'
+                       units                       = 'm/s'
+                       code                        = 255
+                       grid_type                   = 'unstructured'
+                       coordinates                 = 'clon clat'
+                       number_of_grid_in_reference = 1
+    hi_acc                 
+           Size:       20480x1x19
+           Dimensions: ncells,lev,time
+           Datatype:   single
+           Attributes:
+                       standard_name               = 'hi_acc'
+                       long_name                   = 'ice thickness'
+                       units                       = 'm'
+                       code                        = 255
+                       grid_type                   = 'unstructured'
+                       coordinates                 = 'clon clat'
+                       number_of_grid_in_reference = 1
+    hs_acc                 
+           Size:       20480x1x19
+           Dimensions: ncells,lev,time
+           Datatype:   single
+           Attributes:
+                       standard_name               = 'hs_acc'
+                       long_name                   = 'snow thickness'
+                       units                       = 'm'
+                       code                        = 255
+                       grid_type                   = 'unstructured'
+                       coordinates                 = 'clon clat'
+                       number_of_grid_in_reference = 1
+    conc_acc               
+           Size:       20480x1x19
+           Dimensions: ncells,lev,time
+           Datatype:   single
+           Attributes:
+                       standard_name               = 'conc_acc'
+                       long_name                   = 'ice concentration in each ice class'
+                       code                        = 255
+                       grid_type                   = 'unstructured'
+                       coordinates                 = 'clon clat'
+                       number_of_grid_in_reference = 1
+    ice_u_acc              
+           Size:       20480x19
+           Dimensions: ncells,time
+           Datatype:   single
+           Attributes:
+                       standard_name               = 'ice_u_acc'
+                       long_name                   = 'zonal velocity'
+                       units                       = 'm/s'
+                       code                        = 255
+                       grid_type                   = 'unstructured'
+                       coordinates                 = 'clon clat'
+                       number_of_grid_in_reference = 1
+    ice_v_acc              
+           Size:       20480x19
+           Dimensions: ncells,time
+           Datatype:   single
+           Attributes:
+                       standard_name               = 'ice_v_acc'
+                       long_name                   = 'meridional velocity'
+                       units                       = 'm/s'
+                       code                        = 255
+                       grid_type                   = 'unstructured'
+                       coordinates                 = 'clon clat'
+                       number_of_grid_in_reference = 1
